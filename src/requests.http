@@ -1,0 +1,10 @@
+### POST request to create a new product (Laptop)
+POST http://localhost:8080/shop/products?name=Laptop&price=899.99
+Content-Type: application/json
+
+### POST request to create another product (Smartphone)
+POST http://localhost:8080/shop/products?name=Smartphone&price=499.99
+Content-Type: application/json
+
+### GET request to view all products in the shop
+GET http://localhost:8080/shop/products
