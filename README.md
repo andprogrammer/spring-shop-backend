@@ -9,37 +9,37 @@ Backend service that manages products for an online store.
 - **Java Version**: JDK 21 (or later). You can install it using the instructions below.
 
 ## Repository
-   ```bash
-   git clone git@github.com:andprogrammer/spring-shop-backend.git
-   ```
+```bash
+git clone git@github.com:andprogrammer/spring-shop-backend.git
+```
 
 ## Docker
-    ```bash
-    docker build -t spring-boot-app .
-    ```
+```bash
+docker build -t spring-shop-backend .
+```
 
-    ```bash
-    docker run -d -p 8080:8080 --name spring-boot-container spring-boot-app
-    ```
+```bash
+docker run -d -p 8080:8080 --name spring-shop-backend-container spring-shop-backend
+```
 
-    http://localhost:8080
+http://localhost:8080/shop
 
-    ```bash
-    docker stop spring-boot-container
-    ```
+```bash
+docker stop spring-shop-backend-container
+```
 
-    ```bash
-    docker rm spring-boot-container
-    ```
+```bash
+docker rm spring-shop-backend-container
+```
 
 ## Kubernetes
 ```bash
 minikube start
 eval $(minikube -p minikube docker-env)
-docker build -t spring-boot-app .
+docker build -t spring-shop-backend .
 kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/service.yaml
-minikube service spring-boot-app-service
+minikube service spring-shop-backend-service
 minikube ip
 http://<minikube-ip>:8080
 kubectl get deployments
