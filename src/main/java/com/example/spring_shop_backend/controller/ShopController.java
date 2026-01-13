@@ -13,8 +13,11 @@ import java.util.List;
 @RequestMapping("/shop")
 public class ShopController {
 
-    @Autowired
-    private ShopService shopService;
+    private final ShopService shopService;
+
+    public ShopController(ShopService shopService) {
+        this.shopService = shopService;
+    }
 
     // POST request to add a new product to the shop
     @PostMapping("/products")
