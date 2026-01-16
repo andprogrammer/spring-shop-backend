@@ -21,8 +21,8 @@ class ShopTest {
 
         // Assert that the product is added to the shop
         assertEquals(1, shop.getProducts().size());
-        assertEquals("Laptop", shop.getProducts().get(0).getName());
-        assertEquals(899.99, shop.getProducts().get(0).getPrice());
+        assertEquals("Laptop", shop.getProducts().getFirst().getName());
+        assertEquals(899.99, shop.getProducts().getFirst().getPrice());
     }
 
     @Test
